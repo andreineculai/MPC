@@ -18,7 +18,15 @@ We propose a new benchmark based on the MS-COCO dataset and evaluate our model o
 
 ## Setup
 
+### Prerequisites
+
+### Data preparation
+
+## Training and testing
+
 ## Acknowledgements
+
+- The probabilistic embedders for image and text are based on the implementation in [PCME](https://github.com/naver-ai/pcme).
 
 ## Bibtex
 
