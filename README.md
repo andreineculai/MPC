@@ -4,8 +4,6 @@ Official repo for the implementation of [Probabilistic Compositional Embeddings 
 
 Presented at the [Multimodal Learning and Applications Workshop @ CVPR 2022](https://mula-workshop.github.io/).
 
-Code and instructions will be released shortly.
-
 ## Introduction
 
 Existing works in image retrieval often consider retrieving images with one or two query inputs, which do not generalize to multiple queries. In this work, we investigate a more challenging scenario for composing multiple multimodal queries in image retrieval. Given an arbitrary number of query images and (or) texts, our goal is to retrieve target images containing the semantic concepts specified in multiple multimodal queries. 
