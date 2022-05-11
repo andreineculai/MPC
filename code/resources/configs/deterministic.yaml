@@ -18,7 +18,7 @@ dataloader:
 # model configuration for the image and text models
 model:
     name: tirg
-    combiner_type: 'mrn'# 'tirg', 'film', 'relationship', 'mrn'
+    combiner_type: 'tirg'# 'tirg', 'film', 'relationship', 'mrn'
     num_embeds: 1
     embed_size: 512
     cnn_type: resnet50

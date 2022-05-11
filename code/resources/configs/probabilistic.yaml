@@ -39,7 +39,7 @@ optimizer:
 # criterion configuration
 criterion:
     train:
-        name: pcme #'mpc' for MPC, 'pcme' for (PCME + addition, PCME + MLP)
+        name: mpc #'mpc' for MPC, 'pcme' for (PCME + addition, PCME + MLP)
         temperature: 1
         retrieval_loss_weight: 1
         logsigma_l2_loss_weight: 0.001
