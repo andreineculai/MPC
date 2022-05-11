@@ -9,7 +9,7 @@ import pprint
 
 pp = pprint.PrettyPrinter(indent=4)
 
-CONFIG_ROOT = 'resources/configs/'
+CONFIG_ROOT = 'code/resources/configs/'
 
 def main(config_name='default.yaml',
          mode='train',
