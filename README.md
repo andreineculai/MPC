@@ -18,14 +18,14 @@ We propose a new benchmark based on the MS-COCO dataset and evaluate our model o
 
 ## Setup
 
-To setup the environment to run the code create a conda environment using the following commands:
+To setup the environment needed to run the code, create a conda environment using the following commands:
 ```
 conda env create -f environment.yml
 conda activate mpc_env
 ```
 
 ### Data preparation
-Download the files 'captions_train2017' and 'instances_train2017' from the [COCO website](https://cocodataset.org/#download) into the datasets/coco folder.
+Download the files 'captions_train2017' and 'instances_train2017' from the [COCO website](https://cocodataset.org/#download) and place them into the datasets/coco folder.
 
 ## Training and testing
 The config files that control the execution can be found in the code/resources/configs/ folder. The file probabilistic.yaml is used to train the probabilistic models (MPC, PCME+addition) and the file deterministic.yaml is used to run the baselines from the paper (TIRG, MRN, FiLM, Relationship). To run the training, run the following command (example for probabilistic.yaml):
@@ -35,7 +35,7 @@ python code/main.py --config_name=probabilistic.yaml --mode=train
 
 ## COCO benchmark
 
-The files and generating code for the COCO benchmark can be found in datasets/coco. Additional info is provided in the respective README file.
+The files and generating code for the COCO benchmark can be found in datasets/coco. Additional info is provided in the respective README.md file.
 
 ## Acknowledgements
 
