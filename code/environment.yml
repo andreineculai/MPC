@@ -1,0 +1,17 @@
+name: mpc_env
+channels:
+  - pytorch
+  - conda-forge
+dependencies:
+  - python=3.8
+  - pytorch=1.9.1
+  - torchvision=0.10.1
+  - torchaudio
+  - torchtext
+  - fire
+  - munch
+  - pycocotools
+  - pyyaml=5.4.1
+  - nltk
+  - tensorboard
+  - setuptools=58.0.4

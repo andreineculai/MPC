@@ -1,0 +1,52 @@
+models_root: '/shared-network/aneculai/thesis/models'
+dataset_root: '../datasets/'
+imgs_root: '/datasets/coco/images/'
+vocab_root: 'resources/vocabs/'
+dataset_name: coco
+number_of_categories_combined: 2
+trainer: probabilistic
+
+dataloader:
+    batch_size: 32
+    num_workers: 8
+    test_num_workers: 8
+    word_dim: 300
+    random_erasing: 0.2
+    caption_dropout: 0.1
+    caption_start_end_token: True
+
+# model configuration for the image and text models
+model:
+    name: pcme
+    combiner_type: 'mpc'# 'mpc' for MPC, 'pcme_addition' for PCME + addition, 'pcme_mlp' for PCME + MLP
+    num_embeds: 1
+    embed_size: 512
+    cnn_type: resnet50
+    wemb_type: glove
+    glove_size: 42B
+    word_dim: 300
+    n_samples_inference: 7
+
+# optimizer configuration
+optimizer:
+    name: adam
+    learning_rate: 0.0002
+    lr_decay_rate: 0.1
+    lr_decay_step: 600
+    weight_decay: 0.00005
+    resnet_lr_factor: 0.1
+
+# criterion configuration
+criterion:
+    train:
+        name: pcme #'mpc' for MPC, 'pcme' for (PCME + addition, PCME + MLP)
+        temperature: 1
+        retrieval_loss_weight: 1
+        logsigma_l2_loss_weight: 0.001
+
+train:
+    num_epochs: 1600
+    val_epochs: 1600
+    log_step: 200 #batches between tensorboard logs
+    epochs_between_checkpoints: 800
+
