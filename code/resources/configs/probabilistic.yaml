@@ -1,6 +1,6 @@
-models_root: '/shared-network/aneculai/thesis/models'
+models_root: '../models' #path where trained models will be saved
 dataset_root: '../datasets/'
-imgs_root: '/datasets/coco/images/'
+imgs_root: '<path_to_coco_dataset>/images/' #path where the coco images will be found
 vocab_root: 'resources/vocabs/'
 dataset_name: coco
 number_of_categories_combined: 2
