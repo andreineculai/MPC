@@ -4,8 +4,6 @@ Official repo for the implementation of [Probabilistic Compositional Embeddings 
 
 Presented at the [Multimodal Learning and Applications Workshop @ CVPR 2022](https://mula-workshop.github.io/).
 
-Code and instructions will be released shortly.
-
 ## Introduction
 
 Existing works in image retrieval often consider retrieving images with one or two query inputs, which do not generalize to multiple queries. In this work, we investigate a more challenging scenario for composing multiple multimodal queries in image retrieval. Given an arbitrary number of query images and (or) texts, our goal is to retrieve target images containing the semantic concepts specified in multiple multimodal queries. 
@@ -20,15 +18,29 @@ We propose a new benchmark based on the MS-COCO dataset and evaluate our model o
 
 ## Setup
 
-### Prerequisites
+To setup the environment to run the code create a conda environment using the following commands:
+```
+conda env create -f environment.yml
+conda activate mpc_env
+```
 
 ### Data preparation
+Download the files 'captions_train2017' and 'instances_train2017' from the [COCO website](https://cocodataset.org/#download) into the datasets/coco folder.
 
 ## Training and testing
+The config files that control the execution can be found in the code/resources/configs/ folder. The file probabilistic.yaml is used to train the probabilistic models (MPC, PCME+addition) and the file deterministic.yaml is used to run the baselines from the paper (TIRG, MRN, FiLM, Relationship). To run the training, run the following command (example for probabilistic.yaml):
+```
+python code/main.py --config_name=probabilistic.yaml --mode=train
+```
+
+## COCO benchmark
+
+The files and generating code for the COCO benchmark can be found in datasets/coco. Additional info is provided in the respective README file.
 
 ## Acknowledgements
 
 - The probabilistic embedders for image and text are based on the implementation in [PCME](https://github.com/naver-ai/pcme).
+- The TIRG image/text models and combiner as well as the evaluation code are based on the TIRG implementation in [TIRG code](https://github.com/google/tirg).
 
 ## Bibtex
 
