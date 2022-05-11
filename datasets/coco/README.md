@@ -1,7 +1,8 @@
 The benchmark data was generated using the code in the coco_benchmark_generation.ipynb notebook (additional info in the paper supplementary).
 
-The first number (2/3/4) designates the number of categories being combined. i.e. for training combinations of 2 categories, use files starting with '2_'
+The first number (2/3/4) designates the number of categories being combined. i.e. for training combinations of 2 categories, use files starting with '2_'.
 
+Description of the files:
 - '2_cat_combinations' - contains the 1000 combinations of categories as a list. Each element in the list is a list of category ids, for example [1,2] for the combination ['person, car']
 - '2_cat_combinations_zero_shot' - 250 combinations of unseen category combinations that are possible.
 - '2_cat_combinations_impossible' - 250 combinations of unseen category combinations that are impossible in the dataset (e.g., toothbrush and giraffe). These 2 sets (zero shot and impossible) are used to test our model's ability to assign a feasibility score to a combination. A good model should assign a higher score to the unseen but possible combinations than it assigns to impossible combinations.
